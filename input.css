@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+CU:wght@100..400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply overflow-x-hidden scroll-smooth;
+}
+
+/* Base body styling */
+body {
+    @apply bg-green-950 text-white font-Playwrite_CU tracking-wider;
+}
+
+/* Base section styling */
+section {
+    @apply bg-green-950 text-white font-Playwrite_CU tracking-wider;
+}
+
+/* Headings */
+h1 {
+    @apply text-3xl md:text-4xl xl:text-5xl font-bold leading-tight;  
+}
+
+h2 {
+    @apply text-2xl md:text-3xl xl:text-4xl; /* Larger h2 for general usage */
+}
+
+h3 {
+    @apply text-xl md:text-2xl xl:text-3xl;  /* For secondary headers (e.g., smaller sections) */
+}
+
+/* Navigation links */
+.nav-link {
+    @apply text-lg font-bold duration-300;
+}
+
+.nav-link:hover {
+    @apply text-yellow-500;  
+}
+
+.active {
+    @apply text-yellow-500;
+}
+
+.title {
+    @apply font-Jobster text-yellow-500;
+}
+
+/* Home section */
+#home {
+    @apply flex flex-col items-center justify-center min-h-screen text-center px-4 md:px-10;
+    margin-top: 80px; /* Adjust for fixed header height */
+}
+
+#home h1 {
+    @apply mb-4;
+}
+
+#home p {
+    @apply text-base md:text-lg max-w-3xl;
+}
+
+/* Button Styles */
+.btn {
+    @apply border border-yellow-500 bg-yellow-500 rounded-md px-5 py-2 duration-300;
+}
+
+.btn span {
+    @apply font-bold;
+}
+
+.btn:hover {
+    @apply opacity-90;
+}
+
+.btn_outline {
+    @apply bg-transparent;
+}
+
+.btn_outline:hover {
+    @apply bg-yellow-500;
+}
+
+/* Popular Card */
+.popular_card img {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease;
+}
+
+.popular_card:hover img {
+    top: 0;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    @apply bg-green-500 w-3 h-3;
+}
